@@ -1,6 +1,6 @@
 {
   "name": "mongoose-advanced-paginate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library which makes pagination with search, sorting and filtering a breeze for devs in mongoose.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
