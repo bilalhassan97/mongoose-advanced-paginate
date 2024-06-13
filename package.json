@@ -10,7 +10,9 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "prepare": "husky",
     "ts-check": "tsc --skipLibCheck --noEmit",
-    "precommit": "lint-staged --concurrent false && pnpm run ts-check"
+    "release": "pnpm run build && changeset publish",
+    "precommit": "lint-staged --concurrent false && pnpm run ts-check",
+    "lint": "eslint ./src"
   },
   "engines": {
     "node": ">=16.0.0"
