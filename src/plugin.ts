@@ -91,7 +91,10 @@ export const paginatePlugin = <T>(schema: Schema<T>): void => {
       },
     ];
 
-    const [aggregationResult] = await this.aggregate(aggregationPipeline);
+    const [aggregationResult] = await this.aggregate(
+      aggregationPipeline,
+      options.aggregateOptions,
+    );
 
     const total = aggregationResult?.total[0]?.total || 0;
     const records = aggregationResult?.records || [];
