@@ -1,4 +1,4 @@
-import { Model, PipelineStage, Types } from 'mongoose';
+import { AggregateOptions, Model, PipelineStage, Types } from 'mongoose';
 
 export enum ElementType {
   ID = 'id',
@@ -43,6 +43,7 @@ export interface PaginationOptions {
   lookups?: PipelineStage.Lookup[];
   extraStages?: FacetPipelineStage[];
   project?: PipelineStage.Project['$project'];
+  aggregateOptions?: AggregateOptions;
 }
 
 export interface PaginationResult<T> {
