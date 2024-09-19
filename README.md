@@ -24,7 +24,7 @@ To use the pagination plugin in a NestJS application, follow the steps below:
 
 2.  **Create Mongoose Schema**: Define your Mongoose schema and apply the pagination plugin.
 
-    ```
+    ```typescript
     import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
     import { PaginateModel, paginatePlugin } from 'mongoose-advanced-paginate';
 
@@ -47,7 +47,7 @@ To use the pagination plugin in a NestJS application, follow the steps below:
 
 3.  **Service Implementation**: Use the paginate method in your service.
 
-    ```
+    ```typescript
     import { Injectable } from '@nestjs/common';
     import { InjectModel } from '@nestjs/mongoose';
     import { Model } from 'mongoose';
@@ -102,7 +102,7 @@ To use the pagination plugin in an Express.js application, follow the steps belo
 
 2.  **Create Mongoose Schema**: Define your Mongoose schema and apply the pagination plugin.
 
-    ```
+    ```typescript
     const mongoose = require('mongoose');
     const { paginatePlugin } = require('mongoose-advanced-paginate');
 
@@ -121,7 +121,7 @@ To use the pagination plugin in an Express.js application, follow the steps belo
 
 3.  **Controller Implementation**: Handle requests in your Express controller.
 
-    ```
+    ```typescript
     const express = require('express');
     const User = require('./user.model'); // Adjust the path to your model file
     const router = express.Router();
@@ -150,7 +150,7 @@ To use the pagination plugin in an Express.js application, follow the steps belo
 
 ### Advanced Example With Filters and Selectors (NestJS)
 
-```
+```typescript
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { User, UserModel } from './user.schema';
