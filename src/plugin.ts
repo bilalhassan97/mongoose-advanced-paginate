@@ -72,13 +72,13 @@ export const paginatePlugin = <T>(schema: Schema<T>): void => {
       });
     }
 
-    options.extraStages && recordsPipeline.push(...options.extraStages);
-
     if (limit) {
       const skip = (page - 1) * limit;
       recordsPipeline.push({ $skip: skip });
       recordsPipeline.push({ $limit: limit });
     }
+
+    options.extraStages && recordsPipeline.push(...options.extraStages);
 
     options.project && recordsPipeline.push({ $project: options.project });
 
